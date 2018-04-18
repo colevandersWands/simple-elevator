@@ -1,13 +1,14 @@
-# [<challenge name>](https://www.codewars.com/kata/<challenge name>)
+# [Simple Elevator](https://www.codewars.com/kata/simple-elevator)
 
-Explain the challenge as completely & clearly as you can.
+Write a function that mimics the behavior of a safe elevator.  It will travel from where it is, to the floor for the button pressed _if_ the button is valid.
 
-_function name_: Function
-* Args: (how many args does this function take?)
-  * (List each arg, it's type, and it's purpose)
-* Return: (what type does this function return?)
-  * (Describe the return value)
-* Behavior: (What does this function do?)
+simple_elevator : Function
+* Args: 2
+  1. _Number_: the floor the elevator is on - (0 <= floor <= 3)
+  2. _String_: the floor the elevator should go to - ["0","1","2","3"]
+* Return: _Number_ --> -3 <= n <= 3
+  * Return value indicates how many floors the elevator has traveled
+* Behavior: This function will move from it's starting location to it's finishing location, returning the number of floors moved. It is a safe elevator. In case any argument is invalid, it will stay in place to avoid injuring the occupants.
 
 '''js
 // copy of your polished solution for easy reference.
@@ -15,7 +16,7 @@ _function name_: Function
 
 
 ### Index
-* [Input Classifications](#input-classifications)
+* [Input Analysis](#input-analysis)
 * [Solution Explanation](#solution-explanation)
 * [Constraints](#constraints)
 * [Resource Estimation](#resource-estimation)
@@ -27,13 +28,37 @@ _function name_: Function
 
 ---
 
-## Input Classifications
+## Input Analysis
 
-What characteristics of your inputs are important for your solution?  
+What can we measure, analyze or do to incoming args:
+* Types of arguments
+  * If it's string, is it empty
+  * Do math to them if they're numbers
+  * Convert types
+  * Range of number (<, >, ==, ...)
+    * Exclude or include accordingly
+* Compare to known valid inputs
 
-What groupings will you have to consider when building your solution?  
+Classifications:
+* Validity & Invalidity
+  * Valid floor, invalid button
+  * ... all 4 combinations
+* Floor is higher than button
+* Floor is lower than button
+* Floor is same as button
+* Button is a string, but not in the list
+* Floor is a number, but is not in the range
+* Floor is a number, but has a decimal 
+  * Decimal is 0
+  * Decimal is not 0
+* No second argument is passed in
+* More than two args are passed in
+
+
+
 
 How did you use this information to select your test cases?
+
 
 
 [TOP](#index)
