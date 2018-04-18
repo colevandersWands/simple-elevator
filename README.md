@@ -53,13 +53,9 @@ Classifications:
   * Decimal is not 0
 * No second argument is passed in
 * More than two args are passed in
+* Number starts with too many 0's
 
-
-
-
-How did you use this information to select your test cases?
-
-
+I wrote a case or two for each bullet point.  In writing my tests I noticed the "floor is not a number" case was incomplete and added two sub-cases.
 
 [TOP](#index)
 

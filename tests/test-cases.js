@@ -42,6 +42,9 @@ tests({
   'too many args': function() {
     eq(1, simple_elevator(2, "3", {riddle: "_(*)_"}));
   },
+  'too many 0s in front': function() {
+    eq(1, simple_elevator(0002, "3"));
+  }
 
 }); 
 
