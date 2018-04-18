@@ -27,14 +27,24 @@ tests({
   'button is invalid string': function() {
     eq(0, simple_elevator(2, "44"));
   },
+  // this one learned us
   'floor is number out of range': function() {
     eq(0, simple_elevator(6, "3"));
   },
   'floor is a whole Float': function() {
     eq(1, simple_elevator(2.0, "3"));
   },
-  'floor is a fractional Float': function() {
+  'floor is Float > .5': function() {
+    eq(0, simple_elevator(2.7, "3"));
+  },
+  'floor is Float < .5': function() {
     eq(0, simple_elevator(2.2, "3"));
+  },
+  'button is Float > .5': function() {
+    eq(0, simple_elevator(2, "3.2"));
+  },
+  'button is Float < .5': function() {
+    eq(0, simple_elevator(2, "3.5"));
   },
   'no second argument': function() {
     eq(0, simple_elevator(0));

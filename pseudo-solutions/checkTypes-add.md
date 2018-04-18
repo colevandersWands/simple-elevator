@@ -6,7 +6,8 @@ checkValidity_add (num_floor, string_butt)
 	valid_floor = false
 	valid_butt = false
 
-	// do a lot of comparisons
+	// check type
+	// check allowed
 	// if they are valid, set them to true
 
 	if (valid_floor & valid_butt)

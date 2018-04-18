@@ -16,10 +16,15 @@ ___
 
 ### Strategy Explanation
 
+> The validity of the output is not the validity of the input
+
+This strategy has the same flaws as the Subtract First.  It is an option, but only coupled with rigorous type checks first.
+
+```
 We know there are only a small set of possible outputs.  We will try to reconstruct the input types and values by going backwards through a "typical" solution process. 
 
 If the results of this reverse-engineering match the arguments, all is good.  Return the correct reverse-engineered return value.
-
+```
 
 ___
 

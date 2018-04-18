@@ -21,8 +21,8 @@ simple_elevator : Function
 * [Constraints](#constraints)
 * [Resource Estimation](#resource-estimation)
 * [Scaffolding](#scaffolding)
-* [Bugs & Challenges](#bugs-challenges) 
 * [Language Features](#language-features)
+* [Bugs & Challenges](#bugs-challenges) 
 * [Use Cases](#use-cases)
 * [Learning Journal](#learning-journal)
 
@@ -54,6 +54,9 @@ Classifications:
 * No second argument is passed in
 * More than two args are passed in
 * Number starts with too many 0's
+* (noticed this one after failing tests):
+  * Inputs whose difference is a valid output, but are not valid themselves.
+
 
 I wrote a case or two for each bullet point.  In writing my tests I noticed the "floor is not a number" case was incomplete and added two sub-cases.
 
@@ -63,7 +66,10 @@ ___
 
 ## Solution Explanation
 
-Explain your solution in detail, however works for you.  Perhaps by using a specific input to illustrate, by describing your strategy, or by including a diagram [directly from Sketchboard.io](https://sketchboard.io/blog/2014/03/06/github-sketchboard.html).
+
+Since there are very few allowable inputs, we'll just do an exhaustive check to see if the arguments are valid.  Then we'll do the subtraction if they are.
+
+
 
 [TOP](#index)
 
@@ -71,7 +77,11 @@ Explain your solution in detail, however works for you.  Perhaps by using a spec
 
 ## Constraints
 
-What constraints did you place on yourself, and why?  Did they end up being helpful or not?
+We will solve it twice:
+1. With a pure function, unconstrained
+2. With an object. 
+  * Testing will be trickier
+  * The specs will change
 
 [TOP](#index)
 
@@ -80,7 +90,7 @@ ___
 
 ## Resource Estimation
 
-Estimate how what resources you will require, and how much of each.  
+didn't do this 
 
 
 [TOP](#index)
@@ -89,11 +99,25 @@ ___
 
 ## Scaffolding
 
-Provide a link to Gist you used to construct your solution's scaffolding.  What difficulties did you have making it?  How helpful was it in coming up with your finished solution?
+[Scaffolding Gist](https://gist.github.com/colevandersWands/db24816532b371c27abe682380f5dca2)
+
+We had a heated discussion about the use of '==' & '===' for comparing numbers to the similar string (ie. 4 & "4").  
+
+We defaulted our return value to 0.
 
 [TOP](#index)
 
 ___
+
+
+## Language Features
+
+Nothing fancy.  If's, for's, '===' and a Number conversion.
+
+
+[TOP](#index)
+
+---
 
 ## Challenges & Bugs
 
@@ -107,17 +131,6 @@ Did you have trouble keeping track of which part of the challenge you were solvi
 
 ___
 
-## Language Features
-
-List the language features used in your solution.
-
-The focus of these exercises are to strengthen you problem solving skills, not to learn the newest ES6 tricks. When you have the choice between to different language features it is better to choose the option that is easiest to read, most common, or most consistent with the rest of your solution.  
-
-Keeping track of the language features you use will enable you separate the problem solving strategy from the implementation.  Being aware of this difference will be an asset later on when you're faced with larger applications and popular frameworks.
-
-[TOP](#index)
-
----
 ## Use Cases
 
 List 5+ use cases for your solution.  They can be stand-alone, part of an application, or impractical.  Your use cases can be overly complicated, or very basic. What's important is that you come up with as many and as diverse use cases as possible.
@@ -130,6 +143,9 @@ List 5+ use cases for your solution.  They can be stand-alone, part of an applic
 ## Learning Journal
 
 Things I learned studying this problem:
+* !! we failed the test case s_e(6, "3") !!  
+  * This showed us that our strategy is bad, we will accept many arguments that return a valid output but are invalid inputs.
+  * This class of arguments: any numbers such that (floor - button = valid output), but floor or button are invalid inputs.
 
 
 New vocabulary:
