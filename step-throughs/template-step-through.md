@@ -1,7 +1,7 @@
-# Sample Input
+# 6, "3"
 
 
-[Perma-link to your PythonTutor step-through]()
+[PythonTutor Link](https://goo.gl/p1K5VV)
 
 Explanation of why this is an interesting test case to step through
 
@@ -17,24 +17,26 @@ Explanation of why this is an interesting test case to step through
 
 __Predicted Happenings:__
 * __Global Context__
-  * _Variables_
+  * __Primitives_
     a. 
   * _Objects
     a.
-* __Other Contexts__
-  * _Variables_
-    a. 
-  * _Objects
-    a.
+* __simple elevator__
+  * __Primitives_
+    a. floor = 6
+    b. button = "3"
+  * _Objects__
+    a. possible_floors = undefined
+    b. possible_floors = undefined
 
 __Actual Happenings:__
 * __Global Context__
-  * _Variables_
+  * __Primitives_
     a. 
   * _Objects
     a.
 * __Other Contexts__
-  * _Variables_
+  * __Primitives_
     a. 
   * _Objects
     a.

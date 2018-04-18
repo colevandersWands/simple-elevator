@@ -10,9 +10,34 @@ simple_elevator : Function
   * Return value indicates how many floors the elevator has traveled
 * Behavior: This function will move from it's starting location to it's finishing location, returning the number of floors moved. It is a safe elevator. In case any argument is invalid, it will stay in place to avoid injuring the occupants.
 
-'''js
-// copy of your polished solution for easy reference.
-'''
+```js
+function simple_elevator(floor, button) {
+ let returner = 0;
+ let floor_is_valid = false;
+ let button_is_valid = false;
+  
+ let possible_floors = [0, 1, 2, 3];
+ for (let valid_floor of possible_floors) {
+   if (floor === valid_floor) {
+     floor_is_valid = true;
+   }
+ }
+
+ 
+ let possible_buttons = ["0", "1", "2", "3"];
+ for (let valid_button of possible_buttons) {
+   if (button === valid_button) {
+     button_is_valid = true;
+   }
+ }
+
+ if (button_is_valid && floor_is_valid) {
+    returner = Number(button) - floor;
+ }
+  
+ return returner;
+}
+```
 
 
 ### Index
