@@ -4,6 +4,8 @@
 // copy-paste their solution here
 ```
 
+pythontutor link
+
 ---
 
 ## Solution Explanation
