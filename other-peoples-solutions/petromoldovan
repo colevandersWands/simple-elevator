@@ -1,3 +1,5 @@
+## [Petromoldovan](https://www.codewars.com/users/sevenfun)
+
 ```js
 function goto(level,button){
   const possbileLevels = [0,1,2,3];
@@ -9,3 +11,39 @@ function goto(level,button){
   return parseInt(button) - level;
 }
 ```
+
+[PythonTutor link](https://goo.gl/Nt8EhE)
+
+___
+
+### Strategy Analysis
+
+Compare the arguments exhaustively to the possible valid arguments. 
+If they don't exist in the valid arrays, return 0. Otherwise return the subtraction.
+
+___
+
+### Language Features
+
+* Single line if statement
+* indexOf: Array prototype method
+  * Args: 1 (2, but one we care about)
+    * Any type: the item to search for
+  * Return: Number
+    * The index of the first instance of your search query
+    * Or -1 if it doesn't exist
+  * Behavior: searches for the item. if it's there, it returns the index for the first instance. otherwise -1
+
+___
+
+
+### Comparison
+
+They used the same strategy we did, but their implementation is even cleaner than ours. They very cleverly used built-in language features to make their code more succinct and readable.
+
+
+
+
+
+
+

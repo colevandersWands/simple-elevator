@@ -45,9 +45,18 @@ ___
 
 ### Language Features
 
+* parseInt
+* parseFloat
+* ternary
+* typeof
+* modulo
 
 ___
 
 ### Comparison
 
 Same implementation strategy as Sevenfun: a long conditional check for every condition, and an immediate return from their ternary operation
+
+
+
+
