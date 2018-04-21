@@ -2,16 +2,16 @@
 
 ```
 checkValidity_add (num_floor, string_butt)
-	returner = 0
-	valid_floor = false
-	valid_butt = false
+	returner <- 0
+	valid_floor <- false
+	valid_butt <- false
 
 	// check type
 	// check allowed
 	// if they are valid, set them to true
 
 	if (valid_floor & valid_butt)
-		returner = num_floor - string_butt
+		returner <- num_floor - string_butt
 
 	return returner
 END checkValidity_add

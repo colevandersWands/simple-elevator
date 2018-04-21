@@ -94,7 +94,9 @@ ___
 
 Since there are very few allowable inputs, we'll just do an exhaustive check to see if the arguments are valid.  Then we'll do the subtraction if they are.
 
+This Kata's prompt is a functional model of an elevator.  We were curious how an object oriented strategy would change the solutions, so we built one.  
 
+You can compare both the FP & OOP solutions in [this gist](https://gist.github.com/colevandersWands/0ecf1b70b0f9641f49e5500356dfe5b4)
 
 [TOP](#index)
 
@@ -146,11 +148,9 @@ Nothing fancy.  If's, for's, '===' and a Number conversion.
 
 ## Challenges & Bugs
 
-What particular challenges & bugs did you come across when you were filling in your scaffolding?
+We initially tried the "ask questions later" strategy, and found out it didn't work when one of our test cases alerted us to the fact that we can accept a false-positive if invalid arguments produce a valid result.  So we pivoted to another pseudo-solution we prepared.
 
-Were they logic bugs? Language bugs? 
-
-Did you have trouble keeping track of which part of the challenge you were solving?
+There was also some confusion about tiny test, but we'll look into that later.
 
 [TOP](#index)
 
@@ -158,7 +158,12 @@ ___
 
 ## Use Cases
 
-List 5+ use cases for your solution.  They can be stand-alone, part of an application, or impractical.  Your use cases can be overly complicated, or very basic. What's important is that you come up with as many and as diverse use cases as possible.
+* for someone trying to understand how elevators work
+* CLI text-based adventure game
+* de-elevatoring: anywhere we need to find absolute distances constrained to a range
+* strategy practice: validating inputs
+* gut the solution and reuse the type checking
+
 
 
 [TOP](#index)
