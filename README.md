@@ -94,9 +94,6 @@ ___
 
 Since there are very few allowable inputs, we'll just do an exhaustive check to see if the arguments are valid.  Then we'll do the subtraction if they are.
 
-This Kata's prompt is a functional model of an elevator.  We were curious how an object oriented strategy would change the solutions, so we built one.  
-
-You can compare both the FP & OOP solutions in [this gist](https://gist.github.com/colevandersWands/0ecf1b70b0f9641f49e5500356dfe5b4)
 
 [TOP](#index)
 
@@ -109,6 +106,8 @@ We will solve it twice:
 2. With an object. 
   * Testing will be trickier
   * The specs will change
+
+Compare our two strategies in [this gist](https://gist.github.com/colevandersWands/0ecf1b70b0f9641f49e5500356dfe5b4).
 
 [TOP](#index)
 
