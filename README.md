@@ -1,3 +1,9 @@
+<script src="https://gist.github.com/colevandersWands/7bc3534aec4cfbeb266babfc34721f8f.js"></script>
+
+
+
+
+
 # [Simple Elevator](https://www.codewars.com/kata/simple-elevator)
 
 Write a function that mimics the behavior of a safe elevator.  It will travel from where it is, to the floor for the button pressed _if_ the button is valid.
